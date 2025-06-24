@@ -3,38 +3,44 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav
-      className="mx-auto max-w-5xl flex h-16 items-center justify-between w-full px-6 py-4 bg-black   text-white "
-    >
+    <nav className="mx-auto font-bold font-sans max-w-5xl flex h-16 items-center justify-between w-full px-6 py-4 bg-black   text-white ">
       {/* Logo */}
       <div className="text-xl font-semibold">
-        <Link href="/">Rishav</Link>
+        <Link href="/">
+          <span className="text-primary text-2xl font-bold font-sans">
+            R
+            <span className="inline-block w-2 h-2 mx-1  bg-muted-foreground rounded-full"></span>
+            <span className="font-sans text-3xl">m</span>
+          </span>
+        </Link>
       </div>
 
       {/* Desktop Nav */}
       <div className="hidden sm:flex space-x-6">
-        <Link href="/templates" className="hover:text-gray-300">
-          Templates
+        <Link href="/projects" className="hover:text-gray-300 pt-1">
+          Projects
         </Link>
-        <Link href="/consultation" className="hover:text-gray-300">
-          Consultation
+        <Link href="/blogs" className="hover:text-gray-300 pt-1">
+          Blogs
         </Link>
-        <Link href="/faq" className="hover:text-gray-300">
-          FAQ
+        <Link href="/about" className="hover:text-gray-300 pt-1">
+          About Me
         </Link>
-        <Link href="/support" className="hover:text-gray-300">
-          Support
+        <Link href="/support" className="">
+          <Button className="relative overflow-hidden bg-primary text-black text-lg px-6 py-2 rounded-md font-bold group hover:text-primary hover:bg-background transition-colors duration-300">
+            <span className="relative z-10">Contact</span>
+          </Button>
         </Link>
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="sm:hidden relative">
+      <div className="sm:hidden z-20 relative">
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"

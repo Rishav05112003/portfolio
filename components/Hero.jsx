@@ -9,7 +9,7 @@ import { PointerHighlight } from "@/components/ui/pointer-highlight";
 
 const Hero = () => {
   return (
-    <section className="min-h-24 flex flex-col justify-center items-center text-center px-4 py-16 bg-background text-foreground">
+    <section className="min-h-24 w-full flex flex-col justify-center items-center text-center px-4 py-16 bg-background text-foreground">
       <motion.h1
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
