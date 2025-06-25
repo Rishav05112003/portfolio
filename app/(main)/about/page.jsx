@@ -2,112 +2,93 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { Timeline } from "@/components/ui/timeline";
+import { data } from "@/lib/constants";
 
-const SectionHeading = ({ children }) => (
-  <motion.h2
-    initial={{ opacity: 0, y: -20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    viewport={{ once: true, amount: 0.2 }}
-    className="text-3xl md:text-5xl font-bold mb-4 text-center text-primary"
-  >
-    {children}
-  </motion.h2>
-);
-
-const page = () => {
+const About = () => {
   return (
-    <main className="bg-background text-foreground px-6 py-16 max-w-4xl mx-auto space-y-20">
-      {/* Introduction */}
-      <section>
-        <SectionHeading>Hello, I'm Rishavdeep</SectionHeading>
-        <motion.p
-          className="text-lg text-muted-foreground leading-relaxed text-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          A passionate full-stack developer who loves solving real-world problems with code. I believe in blending clean aesthetics with scalable systems, and I’m always exploring ways to make technology feel more human.
-        </motion.p>
-      </section>
-
-      {/* Education */}
-      <section>
-        <SectionHeading>Education</SectionHeading>
-        <motion.div
-          className="text-md text-muted-foreground leading-relaxed"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <p>
-            📚 Final-year B.Tech undergraduate at <strong>NIT Durgapur</strong><br />
-            🎓 Major: Computer Science & Engineering<br />
-            🏆 Academic Interest: Algorithms, Software Systems, and Creative Coding
+    <section className="w-full bg-black mx-auto text-foreground px-4 py-16 space-y-32">
+      {/* 1. Introduction Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex flex-col lg:flex-row items-center gap-6 max-w-6xl mx-20 md:mx-40"
+      >
+        <div className="flex-1 text-center md:text-left">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            Hi, <span className="bg-muted ">Rishav</span> here
+          </h2>
+          <p className="text-md md:text-lg text-muted-foreground leading-relaxed">
+            Grounded, curious, and quietly relentless — I find purpose in
+            building things that matter. I approach every problem with a blend
+            of creativity and calm logic, always striving for clarity in
+            complexity. I’m someone who learns fast, works mindfully, and
+            believes that thoughtful effort beats loud hustle. What follows is
+            not just a list of events, but a timeline of how I’ve shaped myself
+            — one challenge, one lesson, one step at a time.
           </p>
-        </motion.div>
-      </section>
+        </div>
+        <div className="flex-1 items-center justify-center">
+          <Image
+            src="/profile-pic.jpeg"
+            alt="Rishavdeep Maity"
+            width={300}
+            height={300}
+            className="rounded-xl object-cover mx-auto"
+          />
+        </div>
+      </motion.div>
 
-      {/* Coding Journey */}
-      <section>
-        <SectionHeading>My Journey with Code</SectionHeading>
-        <motion.p
-          className="text-md text-muted-foreground leading-relaxed"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          From tinkering with HTML and CSS as a curious teen to deploying full-stack apps with modern frameworks, my journey has been a blend of self-learning, experimentation, and open-source contributions. Whether it’s building tools with React & Next.js or designing clean APIs with Express and FastAPI, I strive to make my code not just work — but feel right.
-        </motion.p>
-      </section>
-
-      {/* Skills */}
-      <section>
-        <SectionHeading>Skills</SectionHeading>
-        <motion.ul
-          className="grid grid-cols-2 md:grid-cols-3 gap-4 text-muted-foreground text-sm"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <li>✅ JavaScript / TypeScript</li>
-          <li>✅ React & Next.js</li>
-          <li>✅ Node.js / Express</li>
-          <li>✅ Prisma / PostgreSQL</li>
-          <li>✅ Tailwind CSS / SCSS</li>
-          <li>✅ MongoDB / Redis</li>
-          <li>✅ FastAPI / Python</li>
-          <li>✅ Git / GitHub</li>
-          <li>✅ Figma / UI Design Principles</li>
-        </motion.ul>
-      </section>
-
-      {/* Creative Outro */}
-      <section>
-        <SectionHeading>A Final Touch</SectionHeading>
-        <motion.div
-          className="text-center text-muted-foreground"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <p className="mb-4">
-            When I’m not coding, I’m sketching concepts, exploring animations, or making playlists that sound like the internet. ✨<br />
-            Let's build something meaningful together.
-          </p>
-          <Button variant="outline" asChild>
-            <a href="mailto:rishavdeep@example.com">Say Hello</a>
-          </Button>
-        </motion.div>
-      </section>
-    </main>
+      {/* 2. Education Timeline Section */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="max-w-5xl mx-auto relative flex p-4 flex-col gap-10"
+      >
+        <Timeline data={data} />
+      </motion.div>
+      {/* 3. Skills Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="max-w-5xl mx-auto text-center"
+      >
+        <h3 className="text-2xl md:text-4xl font-bold mb-6">Skills</h3>
+        <div className="flex flex-wrap justify-center gap-4">
+          {[
+            "Next.js",
+            "React",
+            "Tailwind CSS",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "PostgreSQL",
+            "Prisma",
+            "JavaScript",
+            "TypeScript",
+            "Python",
+            "Git",
+          ].map((skill, i) => (
+            <span
+              key={i}
+              className="px-4 py-2 bg-muted text-foreground rounded-full text-sm font-medium shadow hover:scale-105 transition-transform duration-200"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </motion.div>
+    </section>
   );
 };
 
-export default page;
+export default About;

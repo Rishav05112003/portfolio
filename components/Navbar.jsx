@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="mx-auto font-bold font-sans max-w-5xl flex h-16 items-center justify-between w-full px-6 py-4 bg-black   text-white ">
+    <nav className="mx-auto font-bold  z-100 font-sans max-w-5xl flex h-16 items-center justify-between w-full px-6 py-4 bg-black   text-white ">
       {/* Logo */}
       <div className="text-xl font-semibold">
         <Link href="/">
