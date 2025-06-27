@@ -2,8 +2,9 @@ import About from "@/components/About";
 import Hero from "@/components/Hero";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { images } from "@/lib/constants";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import Skills from "@/components/Skills";
+import { WavyBackground } from "@/components/ui/wavy-background";
+import Projects from "@/components/Projects";
 
 
 export default function Home() {
@@ -14,7 +15,8 @@ export default function Home() {
       items={images}
       className=""></InfiniteMovingCards>
       <About/>
-      
+      <Skills/>
+      <Projects/>
     </div>
   );
 }
