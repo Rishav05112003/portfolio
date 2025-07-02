@@ -3,7 +3,6 @@
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
-import Image from "next/image";
 import { blogs } from "@/lib/constants";
 
 const fadeInVariants = {
@@ -15,8 +14,6 @@ const fadeInVariants = {
   }
 };
 
-
-
 export default function Blogs() {
   const titleRef = useRef(null);
   const isInView = useInView(titleRef, { once: false, margin: "-100px" });
@@ -24,7 +21,7 @@ export default function Blogs() {
   return (
     <section
       id="blogs"
-      className="w-full bg-background text-white py-20 px-6 md:px-16 "
+      className="w-full bg-background text-white py-20 px-6 md:px-16"
     >
       <div className="max-w-7xl mx-auto text-center">
         <motion.h2
@@ -49,32 +46,23 @@ export default function Blogs() {
           {blogs.map((blog, index) => (
             <motion.div
               key={index}
-              className="bg-gradient-to-br from-zinc-900 to-black border border-white/10 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
+              className="bg-gradient-to-tr from-zinc-900 to-black border-0 rounded-xl shadow-lg hover:shadow-2xl transition-all p-6 flex flex-col justify-between"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: false, amount: 0.2 }}
               variants={fadeInVariants}
             >
-              <Image
-                src={blog.image}
-                alt={blog.title}
-                width={600}
-                height={300}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-5">
-                <p className="text-xs text-gray-400 mb-2">{blog.date}</p>
-                <h3 className="text-xl font-semibold mb-2">{blog.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  {blog.excerpt}
-                </p>
-                <Link
-                  href={blog.slug}
-                  className="text-white hover:underline font-medium text-sm"
-                >
-                  Read full post →
-                </Link>
-              </div>
+              <p className="text-xs text-gray-400 mb-2">{blog.date}</p>
+              <h3 className="text-xl font-semibold mb-2">{blog.title}</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                {blog.excerpt}
+              </p>
+              <Link
+                href={blog.slug}
+                className="text-white hover:underline font-medium text-sm mt-auto"
+              >
+                Read full post →
+              </Link>
             </motion.div>
           ))}
         </div>
