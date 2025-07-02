@@ -6,7 +6,7 @@ import { skills } from "@/lib/constants";
 const Skills = () => {
   return (
     <section
-      className="w-full bg-black text-white py-20 px-6 md:px-20"
+      className="w-full bg-background text-white py-20 px-6 md:px-20"
       id="skills"
     >
       <div className="text-center mb-16">

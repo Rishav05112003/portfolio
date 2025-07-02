@@ -5,6 +5,7 @@ import { images } from "@/lib/constants";
 import Skills from "@/components/Skills";
 import { WavyBackground } from "@/components/ui/wavy-background";
 import Projects from "@/components/Projects";
+import Blogs from "@/components/Blogs";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <About/>
       <Skills/>
       <Projects/>
+      <Blogs/>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
 import { projects } from "@/lib/constants";
+import { Meteors } from "./ui/meteors";
 
 const fadeInVariants = {
   hidden: { opacity: 0, filter: "blur(10px)" },
@@ -40,8 +41,9 @@ export default function Projects() {
         >
           A few selected projects that showcase what I’ve been working on lately.
         </motion.p>
+
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects.slice(0, 3).map((project, idx) => (
+          {projects.map((project, idx) => (
             <motion.div
               key={idx}
               className="rounded-xl border border-white/10 bg-gradient-to-br from-zinc-900 to-black p-4 shadow-md hover:shadow-lg transition-all"
@@ -61,8 +63,8 @@ export default function Projects() {
               <p className="text-sm text-muted-foreground mb-1">
                 {project.description}
               </p>
-              <p className="text-sm text-muted-foreground bg-m mb-4">
-                Tech Stack : <span className="bg-muted text-white">{project.tech}</span>
+              <p className="text-sm text-muted-foreground mb-4">
+                Tech Stack: <span className="bg-muted text-white px-1 rounded">{project.tech}</span>
               </p>
               <div className="flex gap-4">
                 <Link href={project.github} target="_blank">
@@ -74,16 +76,28 @@ export default function Projects() {
               </div>
             </motion.div>
           ))}
+
+          {/* Filler card with Meteors */}
+          <motion.div
+            className="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-indigo-900 via-slate-800 to-black/60 p-6 shadow-lg text-left flex flex-col justify-center items-start min-h-[20rem] md:col-span-1 lg:col-span-1 lg:col-start-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            variants={fadeInVariants}
+          >
+            <p className="text-sm uppercase tracking-wide text-blue-400 mb-2">
+              <span className="bg-gradient-to-bl from-green-900 via-green-600 to-green-600 rounded-2xl text-white p-1 text-md px-2">In progress</span>
+            </p>
+            <h3 className="text-2xl font-semibold text-white mb-2">
+              Currently building something big...
+            </h3>
+            <p className="text-sm text-muted-foreground mb-4 relative z-10">
+              I’m working on an automation platform designed to streamline repetitive workflows — from emails to deployments. This project reflects my focus on solving real-world problems with full-stack engineering.
+            </p>
+            <span className="text-xs text-gray-400 italic relative z-10">More updates coming soon...</span>
+            <Meteors number={30} className="absolute inset-0 z-0" />
+          </motion.div>
         </div>
-        <motion.div
-          className="mt-12"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
-          variants={fadeInVariants}
-        >
-          
-        </motion.div>
       </div>
     </section>
   );
