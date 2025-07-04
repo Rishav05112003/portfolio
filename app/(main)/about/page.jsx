@@ -23,14 +23,21 @@ const About = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Hi, <span className="bg-muted ">Rishav</span> here
           </h2>
-          <p className="text-md md:text-lg  text-muted-foreground leading-relaxed">
-            Grounded, curious, and quietly relentless — I find purpose in
-            building things that matter. I approach every problem with a blend
-            of creativity and calm logic, always striving for clarity in
-            complexity. I’m someone who learns fast, works mindfully, and
-            believes that thoughtful effort beats loud hustle. What follows is
-            not just a list of events, but a timeline of how I’ve shaped myself
-            — one challenge, one lesson, one step at a time.
+          <p className="mb-4 text-muted-foreground text-sm md:text-base leading-relaxed">
+            I’m Rishavdeep — a passionate tech enthusiast driven by curiosity
+            and a deep desire to solve real-world problems. I thrive under
+            pressure, adapt quickly, and never stop learning.
+          </p>
+          <p className="mb-4 text-muted-foreground text-sm md:text-base leading-relaxed">
+            Grounded, focused, and quietly relentless, I find meaning in
+            building products that create real impact. I approach every
+            challenge with a calm mindset and creative logic, always working
+            toward clarity in complexity.
+          </p>
+          <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+            What you see here isn’t just a list of achievements. It’s a
+            reflection of growth ; shaped through curiosity, challenges, and
+            mindful execution. One lesson, one project, one step at a time.
           </p>
         </div>
         <div className="flex-1 items-center justify-center">
