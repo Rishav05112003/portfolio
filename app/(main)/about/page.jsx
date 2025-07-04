@@ -10,20 +10,20 @@ import { data } from "@/lib/constants";
 
 const About = () => {
   return (
-    <section className="w-full bg-black mx-auto text-foreground px-4 py-16 space-y-32">
+    <section className="w-full bg-black mx-auto flex flex-col items-center text-foreground px-4 py-16 space-y-32">
       {/* 1. Introduction Section */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="flex flex-col lg:flex-row items-center gap-6 max-w-6xl mx-20 md:mx-40"
+        className="flex flex-col lg:flex-row items-center px-2 gap-6 max-w-6xl mx-5 md:mx-10"
       >
         <div className="flex-1 text-center md:text-left">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Hi, <span className="bg-muted ">Rishav</span> here
           </h2>
-          <p className="text-md md:text-lg text-muted-foreground leading-relaxed">
+          <p className="text-md md:text-lg  text-muted-foreground leading-relaxed">
             Grounded, curious, and quietly relentless — I find purpose in
             building things that matter. I approach every problem with a blend
             of creativity and calm logic, always striving for clarity in

@@ -66,25 +66,19 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="absolute right-0 mt-5 w-48 bg-[#141414] rounded-xl shadow-lg py-2 px-4 flex flex-col space-y-3 text-sm border border-neutral-800"
+              className="absolute right-0 mt-5 w-48 bg-black rounded-xl shadow-lg py-2 px-4 flex flex-col space-y-3 text-sm border border-neutral-800"
             >
-              <Link href="/templates" className="hover:text-gray-300">
-                Templates
+              <Link href="/#projects" className="hover:text-gray-300 pt-1">
+                Projects
               </Link>
-              <Link href="/faq" className="hover:text-gray-300">
-                FAQ
+              <Link href="/#blogs" className="hover:text-gray-300 pt-1">
+                Blogs
               </Link>
-              <Link href="/about" className="hover:text-gray-300">
-                About
+              <Link href="/about" className="hover:text-gray-300 pt-1">
+                About Me
               </Link>
-              <Link href="/support" className="hover:text-gray-300">
-                Support
-              </Link>
-              <Link href="/privacy-policy" className="hover:text-gray-300">
-                Privacy Policy
-              </Link>
-              <Link href="/404" className="hover:text-gray-300">
-                404
+              <Link href="/#contact" className="hover:text-gray-300 pt-1">
+                Contact
               </Link>
             </motion.div>
           )}
