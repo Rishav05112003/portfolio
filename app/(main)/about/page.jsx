@@ -24,7 +24,7 @@ const About = () => {
             Hi, <span className="bg-muted ">Rishav</span> here
           </h2>
           <p className="mb-4 text-muted-foreground text-sm md:text-base leading-relaxed">
-            I’m Rishavdeep — a passionate tech enthusiast driven by curiosity
+            I’m Rishavdeep ; a passionate tech enthusiast driven by curiosity
             and a deep desire to solve real-world problems. I thrive under
             pressure, adapt quickly, and never stop learning.
           </p>
