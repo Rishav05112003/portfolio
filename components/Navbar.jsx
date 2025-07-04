@@ -32,7 +32,7 @@ const Navbar = () => {
         <Link href="/about" className="hover:text-gray-300 pt-1">
           About Me
         </Link>
-        <Link href="/support" className="">
+        <Link href="/#contact" className="">
           <Button className="relative overflow-hidden bg-primary text-black text-lg px-6 py-2 rounded-md font-bold group hover:text-primary hover:bg-background transition-colors duration-300">
             <span className="relative z-10">Contact</span>
           </Button>

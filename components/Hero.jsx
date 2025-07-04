@@ -45,17 +45,17 @@ const Hero = () => {
         <Link href="#projects">
           <Button>View Projects</Button>
         </Link>
-        <Link href="/Rishavdeep_Resume.pdf" target="_blank">
+        <Link href="/resume.pdf" target="_blank">
           <Button variant="outline">
             <FileText className="w-4 h-4 mr-2" /> Resume
           </Button>
         </Link>
-        <Link href="https://github.com/rishavdeep" target="_blank">
+        <Link href="https://github.com/Rishav05112003" target="_blank">
           <Button variant="ghost">
             <Github className="w-4 h-4 mr-2" /> GitHub
           </Button>
         </Link>
-        <Link href="https://linkedin.com/in/rishavdeepmaity" target="_blank">
+        <Link href="https://www.linkedin.com/in/rishavdeep-maity-314b61256/" target="_blank">
           <Button variant="ghost">
             <Linkedin className="w-4 h-4 mr-2" /> LinkedIn
           </Button>
