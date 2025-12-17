@@ -6,13 +6,16 @@ import Skills from "@/components/Skills";
 import { WavyBackground } from "@/components/ui/wavy-background";
 import Projects from "@/components/Projects";
 import Blogs from "@/components/Blogs";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import Contact from "@/components/Contact";
 
 
 export default function Home() {
   return (
-    <div className=" flex flex-col bg-gray-600 justify-center items-center ">
-      <Hero/>
+    
+    <div className="relative mx-auto flex-col flex w-full max-w-7xl items-center justify-center  bg-black ">
+       <Hero/>
+       
       <InfiniteMovingCards 
       items={images}
       className=""></InfiniteMovingCards>
