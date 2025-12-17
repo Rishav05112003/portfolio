@@ -11,7 +11,7 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <div className=" flex flex-col  justify-center items-center ">
+    <div className=" flex flex-col bg-gray-600 justify-center items-center ">
       <Hero/>
       <InfiniteMovingCards 
       items={images}
