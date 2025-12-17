@@ -16,7 +16,7 @@
     "lucide-react": "^0.511.0",
     "luxon": "^3.7.2",
     "motion": "^12.19.1",
-    "next": "15.3.2",
+    "next": "15.3.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "simplex-noise": "^4.0.3",
